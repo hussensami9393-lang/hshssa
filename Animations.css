@@ -1,0 +1,25 @@
+/* ─── Live Price Update Animations ─── */
+@keyframes priceUp {
+  0%   { color: var(--success); }
+  100% { color: var(--ton-blue); }
+}
+@keyframes priceDown {
+  0%   { color: var(--danger); }
+  100% { color: var(--ton-blue); }
+}
+.price-up   { animation: priceUp 1.5s forwards; }
+.price-down { animation: priceDown 1.5s forwards; }
+
+/* ─── Loading Spinner ─── */
+.spinner {
+  display: inline-block;
+  width: 20px; height: 20px;
+  border: 3px solid rgba(255,255,255,0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spinning 0.7s linear infinite;
+  vertical-align: middle;
+}
+@keyframes spinning {
+  to { transform: rotate(360deg); }
+}
